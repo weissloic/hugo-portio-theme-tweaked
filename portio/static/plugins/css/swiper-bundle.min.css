@@ -1,0 +1,133 @@
+/* Assure-toi que les éléments .swiper-slide s'affichent en ligne (horizontale) */
+.service__slider .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Forcer les éléments à s'afficher sur une seule ligne */
+  }
+  
+  .swiper-pagination-bullet {
+    background: #333; /* Couleur des points de pagination */
+  }
+
+  .swiper {
+    width: 100%;
+    height: auto;
+  }
+
+  .swiper-slide {
+    width: 100%; /* Chaque slide prend 100% de la largeur de l'écran sur mobile */
+    box-sizing: border-box; /* Le padding est inclus dans la largeur de l'élément */
+    padding: 15px; /* Ajoute du padding pour que le contenu ne touche pas les bords */
+    flex-shrink: 0; /* Empêche les slides de se rétrécir */
+}
+  
+  .swiper-container {
+    overflow: hidden; /* S'assure que tout le slider est visible */
+  }
+  
+  .swiper.service__slider {
+    width: 100vw; /* Prend toute la largeur de l'écran sans débordement */
+    padding: 0; /* Supprime les marges et padding */
+    box-sizing: border-box;
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Ne permet pas aux éléments de se mettre sur une nouvelle ligne */
+}
+
+  .swiper-slide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    padding: 20px; /* Ajoute un peu d'espace autour du contenu */
+  }
+
+
+  
+/* Gestion du contenu des services */
+.service__slider_item {
+    text-align: center;  /* Centre le texte dans chaque slide */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+  .service-item {
+    display: flex;
+    align-items: flex-start; /* Aligne les éléments au début du conteneur */
+    box-sizing: border-box;
+  }
+  
+  .service-item-content {
+    max-width: 500px;        /* Limite la largeur du texte */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le texte verticalement */
+  }
+  
+  .service-item-content h3 {
+    margin: 0;
+    font-size: 24px;         /* Ajuste la taille du titre */
+  }
+  
+  .service-item-content p {
+    margin: 0px 0 0;        /* Espacement au-dessus du texte */
+    font-size: 16px;         /* Ajuste la taille du texte */
+  }
+  
+
+  .service__slider_item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    overflow: hidden; /* Ajouté pour éviter tout débordement */
+  }
+  
+  .service__slider_item-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Changé de 'contain' à 'cover' */
+    object-position: center; /* Assure que l'image est centrée */
+  }
+
+
+
+
+.swiper.service__slider {
+    padding: 20px 0; /* Ajoute un peu d'espace vertical */
+  }
+  
+  @media (max-width: 767px) {
+    .swiper-slide {
+        width: 100%; /* Chaque slide prend toute la largeur de l'écran */
+        padding: 10%; /* Supprime les espaces */
+        margin: 0; /* Évite le débordement des éléments internes */
+    }
+}
+
+  @media (min-width: 768px) {
+    .swiper-slide {
+      width: 50%; /* Deux slides visibles sur tablette */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .swiper-slide {
+      width: 33.333%; /* Trois slides visibles sur desktop */
+    }
+  }
+
+  .service__slider {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }

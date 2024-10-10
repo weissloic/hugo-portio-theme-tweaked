@@ -25,14 +25,14 @@
 						</svg>
 					</div>
 					<div class="text-light ">
-						<span>Contact me</span>
+						<span>Me contacter</span>
 
 						<h2 class="">
 							<p class="projects"></p>
 						</h2>
 					</div>
 					<div class="footer__cta_action">
-						<a class="btn btn-light btn-zoom" href="{{ .Site.Params.contactLink | absURL }}">Get in touch</a>
+						<a class="btn btn-light btn-zoom" href="{{ .Site.Params.contactLink | absURL }}">Me contacter</a>
 					</div>
 
 				</div>
@@ -40,13 +40,8 @@
 		</div>
 		<div class="row footer__widget">
 			<div class="col-lg-4">
-				<div class="footer__widget_logo mb-5">
-					<img src="{{ .Site.Params.footerLogo | absURL }}" alt="widget-logo">
-				</div>
-			</div>
-			<div class="col-lg-4">
 				<div class="text-light footer__widget_sitemap mb-5">
-					<h4 class="base-font">Sitemap</h4>
+					<h4 class="base-font">Plan du site</h4>
 					<ul class="unstyle-list small">
 						{{ $sitemap := .Site.Menus.sitemap }}
 						{{ range $sitemap }}
@@ -57,7 +52,7 @@
 			</div>
 			<div class="col-lg-4">
 				<div class="text-light footer__widget_address mb-5">
-					<h4 class="base-font">Address</h4>
+		<h4 class="base-font">Informations personnelles</h4>
 					{{ $address := .Site.Params.address }}
 					<ul class="fa-ul small">
 						<li class="mb-2"><a class="text-light" href="tel:{{ $address.phone }}"><span class="fa-li"><i
@@ -74,7 +69,7 @@
 		<div class="row footer__footer">
 			<div class="col-lg-6">
 				<div class="footer__footer_copy text-light">
-					<p>Copyright {{ dateFormat "2006" now }} - All Rights Reserved by <a class="text-light" href="https://staticmania.com/" target="_blank">StaticMania</a></p>
+					<p>Copyright {{ dateFormat "2006" now }} - All Rights Reserved by <a class="text-light">Loïc Weiss</a></p>
 				</div>
 			</div>
 			<div class="col-lg-6">
